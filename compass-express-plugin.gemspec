@@ -4,7 +4,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "compass-pixarea-plugin"
-  s.version     = Compass::Pixarea::Plugin::VERSION
+  s.version     = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.5")
   s.authors = ["Daniel Reszka"]
