@@ -1,0 +1,36 @@
+//MODULES
+  
+.gravatar
+  +float(right)
+  .image
+    width: 78px
+    height: 78px
+    border: 1px solid #555
+    +border-radius
+    +float(right)
+  &-edit
+    +column(7)
+    +float(right)
+    margin: 10px
+    .explanation
+      +column(5) 
+      +last  
+        
+.devise_links
+  +no-bullets
+  padding-left: 0
+  li
+    padding: 5px 0
+
+.locale_links
+  +menu(1)
+  font-variant: small-caps
+  li a
+    background: #E5ECF9
+  .b & 
+    li.current a
+      border: 1px solid
+      
+      
+
+

@@ -1,0 +1,40 @@
+
+@import compass
+@import blueprint/reset
+@import partials/base
+@import blueprint
+@import pixarea/themes/howtosay/partials/form
+@import partials/form
+
+
+
+// Import the non-default scaffolding module to help us get started.
+@import blueprint/scaffolding
+
+// This configuration will only apply the
+// blueprint styles to pages with a body class of "bp"
+// This makes it easier to have pages without blueprint styles
+// when you're using a single/combined stylesheet.
+
+body
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+
+// Remove the scaffolding when you're ready to start doing visual design.
+// Or leave it in if you're happy with how blueprint looks out-of-the-box
+//+blueprint-scaffolding("body.bp")
+// STYLES ---------------------------------
+
+//global
+@import partials/generic
+@import partials/structure
+@import partials/icons
+@import partials/tones
+@import partials/borders
+@import partials/debug
+
+//specific
+@import partials/pages
+

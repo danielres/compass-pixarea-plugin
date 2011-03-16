@@ -1,0 +1,86 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import blueprint/reset
+
+// To configure blueprint, edit the partials/base.sass file.
+@import partials/base
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import blueprint
+
+// Combine the partials into a single screen stylesheet.
+@import partials/page
+@import partials/form
+
+
+@import compass
+
+$bg_light: #E5ECF9
+
+.pg
+  +container
+.hd 
+  ul
+    +float(right)
+    +no-bullets
+    text-align: right
+    +reset-box-model
+.bd
+  .content
+    tbody
+      td, th
+        border: 0 solid #ccc
+        border-width: 0 0 1px    
+      td.actions
+        white-space: nowrap
+        text-align: right
+th.user  
+  +span(1.5)   
+th.created_at
+  +span(1.2)   
+
+td.user,
+td.created_at,
+td.status
+  font-size: 10px   
+     
+td.priority_5
+  color: red      
+td.priority_4
+  color: orange     
+td.priority_3
+  color: green     
+td.priority_2
+  color: blue     
+td.priority_1
+  color: gray     
+  
+//SPECIFIC
+table.tickets
+  font-size: 11px
+  td  
+    vertical-align: top
+    .content
+      font-size: 10px  
+      color: gray
+      line-height: 1.4
+table.ticket
+  background: $bg_light      
+  width: 800px
+  td
+    vertical-align: top
+  td.main
+    width: 600px
+
+
+.tickets_new
+  .content
+    form
+      label
+        font-weight: bold
+      textarea,
+      th input
+        width: 590px      
+.tickets_show
+  .content
+    div
+      background: $bg_light      

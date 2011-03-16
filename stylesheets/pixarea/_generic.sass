@@ -1,0 +1,42 @@
+//MIXINS
+
+=container-alt
+  +container
+  overflow: visible
+  +pie-clearfix    
+
+=menu($itemspan: 3, $centered: true )
+  //use on ul elements
+  +reset-box-model
+  +pie-clearfix
+  li.last
+    +last
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+        
+  >li
+    +column($itemspan)
+    line-height: 1.4
+    @if $centered
+      text-align: center
+    >a
+      +boxing
+      display: block
+      padding: 8px
+    >ul
+      +reset-box-model
+      +no-bullets
+      padding-bottom: 10px
+      >li
+        a
+          padding-left: 25px    
+
+
+  
+//SPECIAL CLASSES  
+
+.TODO
+  outline: 1px dashed rgba(255,0,0,0.5)
+

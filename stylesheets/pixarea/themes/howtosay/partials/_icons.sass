@@ -1,0 +1,37 @@
+// ICONS
+=icon($name, $side: left, $collection: howtosay, $size: 16, $filetype: png)
+  background-image: url(/stylesheets/images/icons/#{$collection}/#{$size}x#{$size}/#{$name}.#{$filetype})
+  background-repeat: no-repeat
+  //margin: -2px 0
+  @if $side == left
+    padding: 2px 0 2px 25px
+    background-position: 5px
+  @if $side == right
+    padding: 2px 18px 2px 0
+    background-position: right
+
+a.likes
+  +icon(thumbs_up, right)
+  +unstyled-link
+
+a.report_abuse
+  //+icon(exclamation, right, silk)
+
+a.coms
+  +icon(user_comment, right, silk)
+  +unstyled-link
+
+a.profile
+  +icon(user, left, silk)
+  text-align: left
+
+a.expressions_new
+  +icon(add, left, silk)
+
+.devise_links
+  .registration a
+    +icon(add, left, silk)
+  .password a
+    +icon(key, left, silk)
+  .session a
+    +icon(door_open, left, silk)

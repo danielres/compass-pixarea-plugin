@@ -1,0 +1,57 @@
+@import partials/lib/menu
+
+=liquid
+  overflow: hidden
+
+.pg
+  +container-alt
+
+.hd
+  +column(24)
+  h1
+    +column(10)
+  .info
+    +column(10)
+
+  .user, .login
+    +column(4)
+    +float(right)
+    +last
+    ul    
+      +reset-box-model
+    >ul
+      +boxing
+      padding: 5px
+      border: 1px solid
+      +no-bullets
+      >li>ul
+        padding-left: 25px
+  .user
+    a
+      display: block
+    a.profile
+      +unstyled-link
+  .login
+    text-align: center
+    
+  .menu1
+    +column(10)
+    >ul
+      +menu      
+.bd
+  +column(24)
+  .aside
+    +column(6)
+    +float(right)
+    margin-left: 10px
+    +last  
+  .content
+    +liquid
+.ft
+  +column(24)
+  ul
+    +menu
+    +float(right)
+    li+li+li
+      +last
+      

@@ -1,0 +1,63 @@
+// MIXINS
+=boxing
+  background: #E5ECF9
+  +border-radius
+  margin-bottom: 10px
+  padding: 20px 20px 5px
+
+=menu($itemspan: 3, $centered: true )
+  //use on ul elements
+  +reset-box-model
+  +pie-clearfix
+  li.last
+    +last
+  a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+        
+  >li
+    +column($itemspan)
+    line-height: 1.4
+    @if $centered
+      text-align: center
+    >a
+      +boxing
+      display: block
+      padding: 8px
+    >ul
+      +reset-box-model
+      +no-bullets
+      padding-bottom: 10px
+      >li
+        a
+          padding-left: 25px    
+
+    
+// CLASSES
+@for $i from 1 through $blueprint-grid-columns
+  body .pg .span-#{$i}
+    +span($i) 
+
+li.current 
+  a, a:hover
+    +unstyled-link
+
+.error,
+.notice,
+.success
+  +border-radius
+  font-weight: bold
+         
+.b
+  +boxing    
+    
+ul.menu
+  +menu
+  .b &>li>a
+    background: darken(#E5ECF9, 5%)
+
+.step
+  +boxing
+  padding: 10px 20px
+   

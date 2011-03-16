@@ -1,0 +1,63 @@
+
+
+//STRUCTURE
+.expressions_show
+  .data
+    +column(17)
+    .col0
+      +column(2)
+    .col1
+      +float(right)
+      +span(5)
+      margin-left: 20px
+    .col2
+      +liquid
+  .comments
+    +column(15)
+    margin-left: 80px
+  .new_comment
+    +column(15)
+    margin-left: 80px
+  div.report_abuse
+    +column(17)
+    text-align: right
+
+//DECORATE STRUCTURE
+.expressions_show
+  .data
+    border: 0 dashed #ccc
+    border-width: 1px 0
+    padding: 20px 0 10px
+    margin-bottom: 20px
+  .comments
+    border: 0 dashed #ccc
+    margin-bottom: 20px
+
+//SPACING
+.expressions_show
+  .content blockquote
+    margin: 50px 80px 30px
+
+//INSIDE STRUCTURE ELEMENTS
+.expressions_show
+  .note
+    font-size: 120%  
+  .data
+    dl
+      overflow: hidden
+      padding: 6px 10px
+      margin: 0
+    dt, dd
+      display: block
+      float: left
+      margin: 0
+    dt
+      width: 60px
+  .report_abuse
+    font-size: 12px
+    a
+      color: #aaa
+      text-decoration: none
+      &:hover
+        color: red
+        text-decoration: underline
